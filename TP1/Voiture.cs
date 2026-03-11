@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Voiture
 {
-    public class voiture
+    public class VoiturePersonnel
     {
         private string immatriculation;
         private int vitesse;
@@ -12,7 +12,7 @@ namespace Voiture
         private int vitesseMax;
 
         private Reservoir monReservoir;
-        public voiture(string imma, int vMax, Reservoir r)
+        public VoiturePersonnel(string imma, int vMax, Reservoir r)
         {
             this.immatriculation = imma;
             this.vitesseMax = vMax;

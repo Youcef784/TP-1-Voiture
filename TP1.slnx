@@ -1,4 +1,5 @@
 <Solution>
   <Project Path="ConsoleApp1/ConsoleApp1.csproj" />
+  <Project Path="FrmVoiture2/FrmVoiture2.csproj" Id="b9fdf5f8-97cc-4869-b662-86a607d12a95" />
   <Project Path="TP1/Voiture.csproj" />
 </Solution>

@@ -12,6 +12,10 @@ namespace Voiture
             this.capacite = capa;
 
         }
+        public Reservoir()
+        {
+            this.capacite = 0;
+        }
 
         public void diminuer(int nblitres)
         {
