@@ -13,15 +13,21 @@ namespace FrmVoiture2
 
         private void btnValiderR_Click(object sender, EventArgs e)
         {
-            listReservoir.Add(new Reservoir(Convert.ToInt16(txtCapacite.Text)))
+            listReservoir.Add(new Reservoir(Convert.ToInt16(txtCapacite.Text)));
+            cmbReservoir.Items.Clear();
+            foreach (Reservoir res in listReservoir)
+            {
+                cmbReservoir.Items.Add(res.ToString());
+            }
         }
 
         private void btnValiderV_Click(object sender, EventArgs e)
         {
             Reservoir r = new Reservoir();
-            foreach (Reservoir res in tabReservoir)
+            int reservoir = Convert.ToInt16(cmbReservoir.SelectedItem.ToString());
+            foreach (Reservoir res in listReservoir)
             {
-                if (res.getCapacite() == Convert.ToInt16(txtCapacite.Text))
+                if (res.getCapacite() == reservoir)
                 {
                     r = res;
                 }

@@ -34,7 +34,6 @@
             txtVitesse = new TextBox();
             txtKmCompteur = new TextBox();
             txtVitesseMax = new TextBox();
-            txtReservoir = new TextBox();
             btnValiderV = new Button();
             lblReservoir = new Label();
             lblVitesseMax = new Label();
@@ -42,20 +41,23 @@
             lblVitesse = new Label();
             lblimmat = new Label();
             btnValiderR = new Button();
-            cmbReservoir = new ComboBox();
             grpReservoir = new GroupBox();
-            lblCapacite = new Label();
+            lblContenu = new Label();
+            lblCapacité = new Label();
+            cmbReservoir = new ComboBox();
+            txtCapacite = new TextBox();
+            txtContenu = new TextBox();
             grpVehicule.SuspendLayout();
             grpReservoir.SuspendLayout();
             SuspendLayout();
             // 
             // grpVehicule
             // 
+            grpVehicule.Controls.Add(cmbReservoir);
             grpVehicule.Controls.Add(txtimmat);
             grpVehicule.Controls.Add(txtVitesse);
             grpVehicule.Controls.Add(txtKmCompteur);
             grpVehicule.Controls.Add(txtVitesseMax);
-            grpVehicule.Controls.Add(txtReservoir);
             grpVehicule.Controls.Add(btnValiderV);
             grpVehicule.Controls.Add(lblReservoir);
             grpVehicule.Controls.Add(lblVitesseMax);
@@ -97,13 +99,6 @@
             txtVitesseMax.Size = new Size(150, 31);
             txtVitesseMax.TabIndex = 7;
             // 
-            // txtReservoir
-            // 
-            txtReservoir.Location = new Point(143, 201);
-            txtReservoir.Name = "txtReservoir";
-            txtReservoir.Size = new Size(150, 31);
-            txtReservoir.TabIndex = 6;
-            // 
             // btnValiderV
             // 
             btnValiderV.Location = new Point(89, 252);
@@ -117,7 +112,7 @@
             // lblReservoir
             // 
             lblReservoir.AutoSize = true;
-            lblReservoir.Location = new Point(6, 207);
+            lblReservoir.Location = new Point(14, 207);
             lblReservoir.Name = "lblReservoir";
             lblReservoir.Size = new Size(84, 25);
             lblReservoir.TabIndex = 4;
@@ -161,7 +156,7 @@
             // 
             // btnValiderR
             // 
-            btnValiderR.Location = new Point(94, 120);
+            btnValiderR.Location = new Point(94, 161);
             btnValiderR.Name = "btnValiderR";
             btnValiderR.Size = new Size(112, 34);
             btnValiderR.TabIndex = 2;
@@ -169,36 +164,60 @@
             btnValiderR.UseVisualStyleBackColor = true;
             btnValiderR.Click += btnValiderR_Click;
             // 
-            // cmbReservoir
-            // 
-            cmbReservoir.FormattingEnabled = true;
-            cmbReservoir.Location = new Point(94, 46);
-            cmbReservoir.Name = "cmbReservoir";
-            cmbReservoir.Size = new Size(182, 33);
-            cmbReservoir.TabIndex = 5;
-            // 
             // grpReservoir
             // 
-            grpReservoir.Controls.Add(cmbReservoir);
+            grpReservoir.Controls.Add(txtContenu);
+            grpReservoir.Controls.Add(txtCapacite);
+            grpReservoir.Controls.Add(lblContenu);
+            grpReservoir.Controls.Add(lblCapacité);
             grpReservoir.Controls.Add(btnValiderR);
-            grpReservoir.Controls.Add(lblCapacite);
             grpReservoir.Location = new Point(0, 0);
             grpReservoir.Name = "grpReservoir";
-            grpReservoir.Size = new Size(300, 160);
+            grpReservoir.Size = new Size(305, 224);
             grpReservoir.TabIndex = 0;
             grpReservoir.TabStop = false;
             grpReservoir.Text = "Réservoir";
             grpReservoir.Enter += grpReservoir_Enter;
             // 
-            // lblCapacite
+            // lblContenu
             // 
-            lblCapacite.AutoSize = true;
-            lblCapacite.Location = new Point(9, 46);
-            lblCapacite.Name = "lblCapacite";
-            lblCapacite.Size = new Size(84, 25);
-            lblCapacite.TabIndex = 0;
-            lblCapacite.Text = "Réservoir";
-            lblCapacite.Click += lblCapacite_Click;
+            lblContenu.AutoSize = true;
+            lblContenu.Location = new Point(6, 109);
+            lblContenu.Name = "lblContenu";
+            lblContenu.Size = new Size(79, 25);
+            lblContenu.TabIndex = 7;
+            lblContenu.Text = "Contenu";
+            // 
+            // lblCapacité
+            // 
+            lblCapacité.AutoSize = true;
+            lblCapacité.Location = new Point(12, 37);
+            lblCapacité.Name = "lblCapacité";
+            lblCapacité.Size = new Size(79, 25);
+            lblCapacité.TabIndex = 6;
+            lblCapacité.Text = "Capacité";
+            // 
+            // cmbReservoir
+            // 
+            cmbReservoir.FormattingEnabled = true;
+            cmbReservoir.Location = new Point(131, 204);
+            cmbReservoir.Name = "cmbReservoir";
+            cmbReservoir.Size = new Size(182, 33);
+            cmbReservoir.TabIndex = 10;
+            // 
+            // txtCapacite
+            // 
+            txtCapacite.Location = new Point(113, 37);
+            txtCapacite.Name = "txtCapacite";
+            txtCapacite.Size = new Size(150, 31);
+            txtCapacite.TabIndex = 8;
+            // 
+            // txtContenu
+            // 
+            txtContenu.Location = new Point(113, 109);
+            txtContenu.Name = "txtContenu";
+            txtContenu.Size = new Size(150, 31);
+            txtContenu.TabIndex = 9;
             // 
             // FrmMenu
             // 
@@ -223,7 +242,6 @@
         private TextBox txtVitesse;
         private TextBox txtKmCompteur;
         private TextBox txtVitesseMax;
-        private TextBox txtReservoir;
         private Button btnValiderV;
         private Label lblReservoir;
         private Label lblVitesseMax;
@@ -231,8 +249,11 @@
         private Label lblVitesse;
         private Label lblimmat;
         private Button btnValiderR;
-        private ComboBox cmbReservoir;
         private GroupBox grpReservoir;
-        private Label lblCapacite;
+        private Label lblContenu;
+        private Label lblCapacité;
+        private ComboBox cmbReservoir;
+        private TextBox txtContenu;
+        private TextBox txtCapacite;
     }
 }
