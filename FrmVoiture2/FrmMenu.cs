@@ -3,25 +3,17 @@ namespace FrmVoiture2
 {
     public partial class FrmMenu : Form
     {
-        Reservoir[] tabReservoir = new Reservoir[3];
+        List<Reservoir> listReservoir;
         int i = 0;
         public FrmMenu()
         {
             InitializeComponent();
+            listReservoir = new List<Reservoir>();
         }
 
         private void btnValiderR_Click(object sender, EventArgs e)
         {
-            tabReservoir[i] = new Reservoir(Convert.ToInt16(txtCapacite.Text));
-            i++;
-            if (i == tabReservoir.Length)
-            {
-                btnValiderR.Enabled = false;
-                MessageBox.Show($"vous avez créez les {tabReservoir.Length} réservoirs");
-            }
-            txtCapacite.Clear();
-            txtContenu.Clear();
-
+            listReservoir.Add(new Reservoir(Convert.ToInt16(txtCapacite.Text)))
         }
 
         private void btnValiderV_Click(object sender, EventArgs e)
@@ -35,6 +27,16 @@ namespace FrmVoiture2
                 }
             }
             VoiturePersonnel v1 = new VoiturePersonnel(txtimmat.Text, Convert.ToInt16(txtVitesseMax.Text), r);
+        }
+
+        private void lblCapacite_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void grpReservoir_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

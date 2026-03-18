@@ -28,12 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            grpReservoir = new GroupBox();
-            txtContenu = new TextBox();
-            txtCapacite = new TextBox();
-            btnValiderR = new Button();
-            lblContenu = new Label();
-            lblCapacite = new Label();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             grpVehicule = new GroupBox();
             txtimmat = new TextBox();
@@ -47,65 +41,13 @@
             lblKmCompteur = new Label();
             lblVitesse = new Label();
             lblimmat = new Label();
-            grpReservoir.SuspendLayout();
+            btnValiderR = new Button();
+            cmbReservoir = new ComboBox();
+            grpReservoir = new GroupBox();
+            lblCapacite = new Label();
             grpVehicule.SuspendLayout();
+            grpReservoir.SuspendLayout();
             SuspendLayout();
-            // 
-            // grpReservoir
-            // 
-            grpReservoir.Controls.Add(txtContenu);
-            grpReservoir.Controls.Add(txtCapacite);
-            grpReservoir.Controls.Add(btnValiderR);
-            grpReservoir.Controls.Add(lblContenu);
-            grpReservoir.Controls.Add(lblCapacite);
-            grpReservoir.Location = new Point(0, 0);
-            grpReservoir.Name = "grpReservoir";
-            grpReservoir.Size = new Size(300, 160);
-            grpReservoir.TabIndex = 0;
-            grpReservoir.TabStop = false;
-            grpReservoir.Text = "Réservoir";
-            // 
-            // txtContenu
-            // 
-            txtContenu.Location = new Point(88, 78);
-            txtContenu.Name = "txtContenu";
-            txtContenu.Size = new Size(150, 31);
-            txtContenu.TabIndex = 4;
-            // 
-            // txtCapacite
-            // 
-            txtCapacite.Location = new Point(88, 30);
-            txtCapacite.Name = "txtCapacite";
-            txtCapacite.Size = new Size(150, 31);
-            txtCapacite.TabIndex = 3;
-            // 
-            // btnValiderR
-            // 
-            btnValiderR.Location = new Point(94, 120);
-            btnValiderR.Name = "btnValiderR";
-            btnValiderR.Size = new Size(112, 34);
-            btnValiderR.TabIndex = 2;
-            btnValiderR.Text = "Valider";
-            btnValiderR.UseVisualStyleBackColor = true;
-            btnValiderR.Click += btnValiderR_Click;
-            // 
-            // lblContenu
-            // 
-            lblContenu.AutoSize = true;
-            lblContenu.Location = new Point(3, 78);
-            lblContenu.Name = "lblContenu";
-            lblContenu.Size = new Size(79, 25);
-            lblContenu.TabIndex = 1;
-            lblContenu.Text = "Contenu";
-            // 
-            // lblCapacite
-            // 
-            lblCapacite.AutoSize = true;
-            lblCapacite.Location = new Point(3, 27);
-            lblCapacite.Name = "lblCapacite";
-            lblCapacite.Size = new Size(79, 25);
-            lblCapacite.TabIndex = 0;
-            lblCapacite.Text = "Capacite";
             // 
             // grpVehicule
             // 
@@ -217,6 +159,47 @@
             lblimmat.TabIndex = 0;
             lblimmat.Text = "Immatriculation";
             // 
+            // btnValiderR
+            // 
+            btnValiderR.Location = new Point(94, 120);
+            btnValiderR.Name = "btnValiderR";
+            btnValiderR.Size = new Size(112, 34);
+            btnValiderR.TabIndex = 2;
+            btnValiderR.Text = "Valider";
+            btnValiderR.UseVisualStyleBackColor = true;
+            btnValiderR.Click += btnValiderR_Click;
+            // 
+            // cmbReservoir
+            // 
+            cmbReservoir.FormattingEnabled = true;
+            cmbReservoir.Location = new Point(94, 46);
+            cmbReservoir.Name = "cmbReservoir";
+            cmbReservoir.Size = new Size(182, 33);
+            cmbReservoir.TabIndex = 5;
+            // 
+            // grpReservoir
+            // 
+            grpReservoir.Controls.Add(cmbReservoir);
+            grpReservoir.Controls.Add(btnValiderR);
+            grpReservoir.Controls.Add(lblCapacite);
+            grpReservoir.Location = new Point(0, 0);
+            grpReservoir.Name = "grpReservoir";
+            grpReservoir.Size = new Size(300, 160);
+            grpReservoir.TabIndex = 0;
+            grpReservoir.TabStop = false;
+            grpReservoir.Text = "Réservoir";
+            grpReservoir.Enter += grpReservoir_Enter;
+            // 
+            // lblCapacite
+            // 
+            lblCapacite.AutoSize = true;
+            lblCapacite.Location = new Point(9, 46);
+            lblCapacite.Name = "lblCapacite";
+            lblCapacite.Size = new Size(84, 25);
+            lblCapacite.TabIndex = 0;
+            lblCapacite.Text = "Réservoir";
+            lblCapacite.Click += lblCapacite_Click;
+            // 
             // FrmMenu
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -226,21 +209,14 @@
             Controls.Add(grpReservoir);
             Name = "FrmMenu";
             Text = "Menu";
-            grpReservoir.ResumeLayout(false);
-            grpReservoir.PerformLayout();
             grpVehicule.ResumeLayout(false);
             grpVehicule.PerformLayout();
+            grpReservoir.ResumeLayout(false);
+            grpReservoir.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
-
-        private GroupBox grpReservoir;
-        private TextBox txtContenu;
-        private TextBox txtCapacite;
-        private Button btnValiderR;
-        private Label lblContenu;
-        private Label lblCapacite;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private GroupBox grpVehicule;
         private TextBox txtimmat;
@@ -254,5 +230,9 @@
         private Label lblKmCompteur;
         private Label lblVitesse;
         private Label lblimmat;
+        private Button btnValiderR;
+        private ComboBox cmbReservoir;
+        private GroupBox grpReservoir;
+        private Label lblCapacite;
     }
 }
