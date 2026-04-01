@@ -1,0 +1,12 @@
+C:\Users\youyo\source\repos\Tp1\TP1\TP1\obj\Debug\net10.0\Voiture.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\youyo\source\repos\Tp1\TP1\TP1\obj\Debug\net10.0\Voiture.AssemblyInfoInputs.cache
+C:\Users\youyo\source\repos\Tp1\TP1\TP1\obj\Debug\net10.0\Voiture.AssemblyInfo.cs
+C:\Users\youyo\source\repos\Tp1\TP1\TP1\obj\Debug\net10.0\Voiture.csproj.CoreCompileInputs.cache
+C:\Users\youyo\source\repos\Tp1\TP1\TP1\obj\Debug\net10.0\Voiture.sourcelink.json
+C:\Users\youyo\source\repos\Tp1\TP1\TP1\bin\Debug\net10.0\Voiture.deps.json
+C:\Users\youyo\source\repos\Tp1\TP1\TP1\bin\Debug\net10.0\Voiture.dll
+C:\Users\youyo\source\repos\Tp1\TP1\TP1\bin\Debug\net10.0\Voiture.pdb
+C:\Users\youyo\source\repos\Tp1\TP1\TP1\obj\Debug\net10.0\Voiture.dll
+C:\Users\youyo\source\repos\Tp1\TP1\TP1\obj\Debug\net10.0\refint\Voiture.dll
+C:\Users\youyo\source\repos\Tp1\TP1\TP1\obj\Debug\net10.0\Voiture.pdb
+C:\Users\youyo\source\repos\Tp1\TP1\TP1\obj\Debug\net10.0\ref\Voiture.dll

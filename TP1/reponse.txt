@@ -1,0 +1,11 @@
+TP n°2 : 
+1. les erreurs sont la déclaration du type de vitesseMax, la déclaration en paramétre de vMax dans le constructeur et l'utilisation de vMax dans le constrcuteur alors qu'il n'est pas déclarée.
+2.Le constructeur devrait avoir 3 paramétre.
+3.IL y'a un cadena sur immatricuation car c'est un attribut privée.
+5. Il y'a la classe réservoir qui est en liaison avec la classe voiture.
+
+TP n°4 : 
+1. Une list sert à stocker plusieurs éléments dans un ordre avec une taille qui s’adapte automatiquement.
+2. cmbReservoir est rempli dans la table Reservoir avec les variable Contenu et Capacite.
+3. cmbReservoir.Items.claer() sert a vider cmb réservoir à chaque fois qu'il y'a une nouvel valeur qui est ajouté pour laisser de la place.
+4. Cela va permettre de vider cmbReservoir pour que la nouvel instancier soit stocké à la place de l'ancienne.

@@ -10,6 +10,7 @@ namespace Voiture
         public Reservoir(int capa)
         {
             this.capacite = capa;
+            this.contenu = capa;
 
         }
         public Reservoir()
